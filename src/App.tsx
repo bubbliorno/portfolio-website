@@ -1,9 +1,5 @@
 function App() {
-  return (
-    <div className="min-h-screen bg-white text-gray-900">
-      Test
-    </div>
-  )
+  return <div className="min-h-screen bg-white text-gray-900">Test</div>;
 }
 
-export default App
+export default App;
