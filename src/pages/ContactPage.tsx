@@ -1,11 +1,11 @@
-import { FaSquareGithub, FaLinkedin } from 'react-icons/fa6';
+import { FaGithub, FaLinkedin } from 'react-icons/fa6';
 import { FiMail } from 'react-icons/fi';
 
 const contacts = [
   {
     label: 'GitHub',
     href: 'https://github.com/bubbliorno',
-    icon: FaSquareGithub,
+    icon: FaGithub,
   },
   {
     label: 'LinkedIn',

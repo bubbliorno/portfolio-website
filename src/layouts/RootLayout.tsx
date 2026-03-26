@@ -1,13 +1,13 @@
 import { Outlet } from 'react-router-dom';
 import Nav from '../components/Nav';
-import Hero from '../components/Hero';
+import Header from '../components/Header';
 
 export default function RootLayout() {
   return (
     <div className="min-h-screen">
-      <Nav />
-      <main className="mx-auto max-w-4xl px-6 py-8">
-        <Hero />
+      <main className="mx-6 my-8">
+        <Header />
+        <Nav />
         <Outlet />
       </main>
     </div>

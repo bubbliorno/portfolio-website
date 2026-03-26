@@ -1,5 +1,5 @@
 import type { Project } from '../types/project';
-import { FaSquareGithub } from 'react-icons/fa6';
+import { FaGithub } from 'react-icons/fa6';
 import { FiExternalLink } from 'react-icons/fi';
 
 export default function ProjectCard({ project }: { project: Project }) {
@@ -28,7 +28,7 @@ export default function ProjectCard({ project }: { project: Project }) {
           rel="noopener noreferrer"
           className="inline-flex items-center gap-1 text-sm font-medium underline underline-offset-4"
         >
-          <FaSquareGithub size={16} />
+          <FaGithub size={16} />
           Code
         </a>
         {project.liveUrl && (

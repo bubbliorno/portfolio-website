@@ -9,17 +9,15 @@ const links = [
 
 export default function Nav() {
   return (
-    <nav className="flex items-center justify-start px-6 py-4">
-      <ul className="flex gap-3 text-sm sm:gap-6 sm:text-base">
+    <nav className="mt-12 flex items-center justify-start">
+      <ul className="flex flex-col gap-3 text-xs">
         {links.map((link) => (
           <li key={link.to}>
             <NavLink
               to={link.to}
               end={link.to === '/'}
               className={({ isActive }) =>
-                isActive
-                  ? 'font-medium underline underline-offset-4'
-                  : 'font-light'
+                isActive ? 'font-medium' : 'font-light'
               }
             >
               {link.label}
