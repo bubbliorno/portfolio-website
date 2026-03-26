@@ -2,8 +2,24 @@
 
 @font-face {
   font-family: 'Elza';
+  src: url('/fonts/elza_extralight.woff2') format('woff2');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Elza';
   src: url('/fonts/elza_light.woff2') format('woff2');
   font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Elza';
+  src: url('/fonts/elza_regular.woff2') format('woff2');
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
@@ -19,10 +35,19 @@
 @theme {
   --font-sans: 'Elza', system-ui, sans-serif;
   --color-background: #e6e6e6;
-  --color-text: #191919;
+  --color-text: #1a1a1a;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
 }
 
 @layer base {
+  html {
+    font-size: 16px;
+  }
+
   body {
     font-family: var(--font-sans);
     background-color: var(--color-background);

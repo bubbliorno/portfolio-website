@@ -9,8 +9,7 @@ const links = [
 
 export default function Nav() {
   return (
-    <nav className="flex items-center justify-between px-6 py-4">
-      <span className="text-lg font-medium">Your Name</span>
+    <nav className="flex items-center justify-start px-6 py-4">
       <ul className="flex gap-3 text-sm sm:gap-6 sm:text-base">
         {links.map((link) => (
           <li key={link.to}>
