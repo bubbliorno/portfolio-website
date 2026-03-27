@@ -4,8 +4,8 @@ import Header from '../components/Header';
 
 export default function RootLayout() {
   return (
-    <div className="min-h-screen">
-      <main className="mx-6 my-8">
+    <div className="flex min-h-dvh">
+      <main className="border-text/50 m-5 grow border-2 p-5 sm:m-12 sm:p-12">
         <Header />
         <Nav />
         <Outlet />
