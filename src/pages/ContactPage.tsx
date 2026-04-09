@@ -21,8 +21,8 @@ const contacts = [
 
 export default function ContactPage() {
   return (
-    <section className="">
-      <ol className="flex flex-col gap-1">
+    <section className="flex grow items-end">
+      <ol>
         {contacts.map((contact) => (
           <li key={contact.label}>
             <a
@@ -32,7 +32,7 @@ export default function ContactPage() {
               className="flex items-center transition-opacity hover:opacity-70"
               aria-label={contact.label}
             >
-              <span className="lin text-xs font-bold sm:text-sm">
+              <span className="text-sm leading-normal font-bold">
                 {contact.label} ↗
               </span>
             </a>

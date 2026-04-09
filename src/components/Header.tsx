@@ -8,16 +8,14 @@ const links = [
 
 export default function Header() {
   return (
-    <header className="w-fit">
-      <h1 className="font-display text-3xl font-extralight tracking-tight sm:text-6xl">
+    <header className="fixed">
+      <h1 className="font-display text-4xl font-extralight tracking-tight whitespace-nowrap lg:text-6xl">
         Anthony Võ
       </h1>
-      <p className="mt-0.5 text-xs font-light tracking-tighter sm:text-sm">
-        Software Engineer + Designer
-      </p>
+      <p className="mt-0.5 text-xs font-light tracking-tight">SWE + Designer</p>
 
-      <nav className="mt-6">
-        <ol className="flex flex-col gap-2 text-xs tracking-tight sm:text-sm">
+      <nav className="mt-9">
+        <ol className="flex flex-col gap-2 text-sm tracking-tight">
           {links.map((link) => (
             <li key={link.to}>
               <NavLink

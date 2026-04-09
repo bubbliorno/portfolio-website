@@ -32,6 +32,10 @@
   font-display: swap;
 }
 
+:root {
+  --pad: max(20px, 4vmin);
+}
+
 @theme {
   --font-display: 'Helvetica Now', system-ui;
   --font-sans: 'RM Neue', system-ui;
@@ -49,6 +53,7 @@
     font-size: 16px;
     text-rendering: optimizeLegibility;
     user-select: none;
+    line-height: 1;
   }
 
   body {

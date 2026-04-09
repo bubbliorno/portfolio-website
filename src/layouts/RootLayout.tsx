@@ -4,9 +4,9 @@ import Header from '../components/Header';
 export default function RootLayout() {
   return (
     <div className="flex min-h-dvh">
-      <main className="border-text/50 relative m-5 flex grow flex-col border-2 p-5 sm:m-12 sm:p-12">
+      <main className="border-text/50 relative m-(--pad) flex grow flex-col border p-(--pad) sm:border-2">
         <Header />
-        <div className="grow">
+        <div className="flex grow flex-col">
           <Outlet />
         </div>
       </main>

@@ -3,16 +3,18 @@ import { FiExternalLink } from 'react-icons/fi';
 
 export default function ProjectItem({ project }: { project: Project }) {
   return (
-    <div className="">
+    <div>
       <a
         href={project.githubUrl}
         target="_blank"
         rel="noopener noreferrer"
         className="hover:opacity-50"
       >
-        <h2 className="font-display text-3xl sm:text-6xl">{project.name}</h2>
+        <h2 className="font-display text-[6vw] whitespace-pre-line lg:text-6xl">
+          {project.name}
+        </h2>
       </a>
-      <p className="mt-3 text-sm font-bold sm:mt-5">{project.description}</p>
+      <p className="mt-2 text-sm font-bold md:mt-4">{project.description}</p>
       {project.tags && (
         <div className="mt-3 flex flex-wrap gap-2">
           {project.tags.map((tag) => (
