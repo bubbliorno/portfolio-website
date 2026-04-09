@@ -1,3 +1,3 @@
 export default function HomePage() {
-  return null;
+  return <p className="text-sm font-bold">Home</p>;
 }

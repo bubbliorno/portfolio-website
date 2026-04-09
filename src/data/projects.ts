@@ -2,16 +2,15 @@ import type { Project } from '../types/project';
 
 export const projects: Project[] = [
   {
-    name: 'Project One',
-    description: 'A brief description of this project and what it does.',
-    githubUrl: 'https://github.com/username/project-one',
-    liveUrl: 'https://project-one.example.com',
-    tags: ['React', 'TypeScript'],
+    name: 'Volunteer Management App',
+    description:
+      "A mobile app solution for managing your organization's volunteers",
+    githubUrl: 'https://github.com/bubbliorno/volunteer-management-app',
   },
   {
-    name: 'Project Two',
-    description: 'A brief description of this project and what it does.',
-    githubUrl: 'https://github.com/username/project-two',
-    tags: ['Python', 'FastAPI'],
+    name: 'CryptPad Task Automation',
+    description:
+      'Extracts data from a Cryptpad Form and injects them as tasks in a Kanban board',
+    githubUrl: 'https://github.com/bubbliorno/kanban-task-automation',
   },
 ];

@@ -1,39 +1,40 @@
 @import 'tailwindcss';
 
 @font-face {
-  font-family: 'Elza';
-  src: url('/fonts/elza_extralight.woff2') format('woff2');
+  font-family: 'Helvetica Now';
+  src: url('/fonts/HelveticaNowDisplayThin.woff2') format('woff2');
   font-weight: 200;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Elza';
-  src: url('/fonts/elza_light.woff2') format('woff2');
+  font-family: 'RM Neue';
+  src: url('/fonts/RMNeue-Light.woff2') format('woff2');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Elza';
-  src: url('/fonts/elza_regular.woff2') format('woff2');
+  font-family: 'RM Neue';
+  src: url('/fonts/RMNeue-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Elza';
-  src: url('/fonts/elza_medium.woff2') format('woff2');
-  font-weight: 500;
+  font-family: 'RM Neue';
+  src: url('/fonts/RMNeue-Bold.woff2') format('woff2');
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
 @theme {
-  --font-sans: 'Elza', system-ui, sans-serif;
+  --font-display: 'Helvetica Now', system-ui;
+  --font-sans: 'RM Neue', system-ui;
   --color-background: #e6e6e6;
   --color-text: #1a1a1a;
   --breakpoint-sm: 640px;
@@ -46,6 +47,8 @@
 @layer base {
   html {
     font-size: 16px;
+    text-rendering: optimizeLegibility;
+    user-select: none;
   }
 
   body {

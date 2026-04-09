@@ -1,20 +1,24 @@
 import type { Project } from '../types/project';
-import { FaGithub } from 'react-icons/fa6';
 import { FiExternalLink } from 'react-icons/fi';
 
-export default function ProjectCard({ project }: { project: Project }) {
+export default function ProjectItem({ project }: { project: Project }) {
   return (
-    <div className="rounded-lg border border-text/10 bg-white p-6 transition-shadow hover:shadow-md">
-      <h3 className="text-xl font-medium">{project.name}</h3>
-      <p className="mt-2 font-light leading-relaxed text-text/70">
-        {project.description}
-      </p>
+    <div className="">
+      <a
+        href={project.githubUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hover:opacity-50"
+      >
+        <h2 className="font-display text-3xl sm:text-6xl">{project.name}</h2>
+      </a>
+      <p className="mt-3 text-sm font-bold sm:mt-5">{project.description}</p>
       {project.tags && (
         <div className="mt-3 flex flex-wrap gap-2">
           {project.tags.map((tag) => (
             <span
               key={tag}
-              className="rounded-full bg-text/5 px-3 py-1 text-xs font-medium"
+              className="rounded-full px-3 py-1 text-sm font-medium"
             >
               {tag}
             </span>
@@ -26,11 +30,8 @@ export default function ProjectCard({ project }: { project: Project }) {
           href={project.githubUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-1 text-sm font-medium underline underline-offset-4"
-        >
-          <FaGithub size={16} />
-          Code
-        </a>
+          className="inline-flex items-center gap-1 text-sm font-medium"
+        ></a>
         {project.liveUrl && (
           <a
             href={project.liveUrl}
@@ -38,7 +39,7 @@ export default function ProjectCard({ project }: { project: Project }) {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1 text-sm font-medium underline underline-offset-4"
           >
-            <FiExternalLink size={16} />
+            <FiExternalLink size={24} />
             Live Demo
           </a>
         )}
