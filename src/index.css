@@ -1,8 +1,8 @@
 @import 'tailwindcss';
 
 @font-face {
-  font-family: 'Helvetica Now';
-  src: url('/fonts/HelveticaNowDisplayThin.woff2') format('woff2');
+  font-family: 'Neue Haas Grotesk';
+  src: url('/fonts/NHaasGroteskDSPro-25Th.otf') format('opentype');
   font-weight: 200;
   font-style: normal;
   font-display: swap;
@@ -37,10 +37,11 @@
 }
 
 @theme {
-  --font-display: 'Helvetica Now', system-ui;
+  --font-display: 'Neue Haas Grotesk', system-ui;
   --font-sans: 'RM Neue', system-ui;
   --color-background: #e6e6e6;
   --color-text: #1a1a1a;
+  --breakpoint-xs: 480px;
   --breakpoint-sm: 640px;
   --breakpoint-md: 768px;
   --breakpoint-lg: 1024px;
@@ -54,11 +55,25 @@
     text-rendering: optimizeLegibility;
     user-select: none;
     line-height: 1;
+    background-color: var(--color-background);
   }
 
   body {
     font-family: var(--font-sans);
-    background-color: var(--color-background);
     color: var(--color-text);
   }
+
+  a {
+    @apply transition-opacity duration-400 ease-out hover:opacity-33;
+  }
+}
+
+::view-transition-old(outlet) {
+  animation-duration: 200ms;
+  animation-timing-function: ease-out;
+}
+::view-transition-new(outlet) {
+  animation-duration: 300ms;
+  animation-delay: 200ms;
+  animation-timing-function: ease-in;
 }

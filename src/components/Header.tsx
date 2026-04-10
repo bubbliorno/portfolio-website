@@ -8,22 +8,23 @@ const links = [
 
 export default function Header() {
   return (
-    <header className="fixed">
-      <h1 className="font-display text-4xl font-extralight tracking-tight whitespace-nowrap lg:text-6xl">
+    <header className="fixed z-10">
+      <h1 className="font-display text-3xl font-extralight whitespace-nowrap xl:text-6xl">
         Anthony Võ
       </h1>
-      <p className="mt-0.5 text-xs font-light tracking-tight">SWE + Designer</p>
+      <p className="mt-0.5 text-xs font-normal tracking-tight xl:text-sm">
+        Software Engineer
+      </p>
 
       <nav className="mt-9">
-        <ol className="flex flex-col gap-2 text-sm tracking-tight">
+        <ol className="flex flex-col gap-2 text-xs tracking-tight xl:text-sm">
           {links.map((link) => (
             <li key={link.to}>
               <NavLink
                 to={link.to}
                 end={link.to === '/'}
-                className={({ isActive }) =>
-                  isActive ? 'font-bold' : 'font-normal'
-                }
+                viewTransition
+                className="font-bold"
               >
                 {link.label}
               </NavLink>
@@ -34,7 +35,7 @@ export default function Header() {
               href="/Anthony_Vo_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-normal"
+              className="font-bold"
             >
               Resume ↗
             </a>
