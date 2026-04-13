@@ -24,7 +24,9 @@ export default function Header() {
                 to={link.to}
                 end={link.to === '/'}
                 viewTransition
-                className="font-bold"
+                className={({ isActive }) =>
+                  `font-bold ${isActive ? 'pointer-events-none text-current/33' : ''}`
+                }
               >
                 {link.label}
               </NavLink>
